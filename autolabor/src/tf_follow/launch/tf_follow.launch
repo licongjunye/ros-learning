@@ -1,0 +1,18 @@
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle1" output="screen" />
+    <node pkg="turtlesim" type="turtle_teleop_key" name="key" output="screen"/>
+
+    <node pkg="tf_follow" type="new_turtle" name="new_turtle" args="turtle2" output="screen"/>
+    <node pkg="tf_follow" type="new_turtle" name="new_turtle3" args="turtle3" output="screen"/>
+    <node pkg="tf_follow" type="new_turtle" name="new_turtle4" args="turtle4" output="screen"/>
+
+    <node pkg="tf_follow" type="tf_pub_turtle" name="pub1" args="turtle1" output="screen"/>
+    <node pkg="tf_follow" type="tf_pub_turtle" name="pub2" args="turtle2" output="screen"/>
+    <node pkg="tf_follow" type="tf_pub_turtle" name="pub3" args="turtle3" output="screen"/>
+     <node pkg="tf_follow" type="tf_pub_turtle" name="pub4" args="turtle4" output="screen"/>
+
+    <node pkg="tf_follow" type="tf_control_turtle" name="control" args="turtle1 turtle2" output="screen"/>
+    <node pkg="tf_follow" type="tf_control_turtle" name="control2" args="turtle2 turtle3" output="screen"/>
+    <node pkg="tf_follow" type="tf_control_turtle" name="control3" args="turtle3 turtle4" output="screen"/>
+
+</launch>

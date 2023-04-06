@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find gazebo_pkg)/launch/racecar_nav.launch" />
+    <include file="$(find racecar_control)/launch/racecar_control.launch" />
+    <include file="$(find gazebo_nav)/launch/racecar_nav.launch" />
+    <include file="$(find gazebo_nav)/cfg/amcl/amcl.launch" />
+</launch>
